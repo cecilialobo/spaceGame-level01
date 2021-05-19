@@ -1,0 +1,14 @@
+#title {
+    background-color: #E8F0FF;
+    color: black;
+    width: 30rem;
+    margin: 5rem auto 3rem auto;
+    border-radius: 4px;
+}
+
+#intro-description {
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 60rem;
+    margin: 0 auto 3rem auto;
+}

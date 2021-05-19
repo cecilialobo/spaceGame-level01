@@ -20,11 +20,12 @@ function App() {
       
       <div id='challenge1'>
         <Inspect />
-        <input type='submit' value='DISABLE ALARM'></input>
+        <button onClick={() => {changeDisplay('challenge1', 'challenge2')}}>DISABLE ALARM</button>
       </div>
 
       <div id='challenge2'>
         <Password />
+        <button onClick={() => {changeDisplay('challenge2', 'challenge3')}}>I have the password!</button>
       </div>
       
       <div id='challenge3'>
