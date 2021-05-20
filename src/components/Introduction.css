@@ -1,9 +1,10 @@
 #title {
     background-color: #E8F0FF;
     color: black;
-    width: 30rem;
+    width: 25rem;
     margin: 5rem auto 3rem auto;
     border-radius: 4px;
+    padding: 1rem;
 }
 
 #intro-description {

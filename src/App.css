@@ -1,22 +1,35 @@
 #intro {
     text-align: center; 
     height: 90vh;
-    animation-name: intro;
-    animation-duration: 15s;
+    animation-name: float;
+    animation-duration: 25s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
-}
-
-@keyframes intro {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 100px); }
-    100%   { transform: translate(0, -0px); }    
 }
 
 #challenge1 {
+    height: 90vh;
     display: none;
+    text-align: center;
+    animation-name: float;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#inspect-p {
+    font-size: 1.5rem;
+    width: 60rem;
+    margin: 2rem auto;
+}
+
+#inspect-label {
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+#inspect-input {
+    margin-right: 1rem;
 }
 
 #challenge2 {
@@ -27,7 +40,7 @@
     display: none;
 }
 
-#introButton {
+#intro-button {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     font-size: 1rem;
@@ -38,6 +51,12 @@
     border: 2px solid gray;
 }
 
-#introButton:hover {
+#intro-button:hover {
     background-color: #E8F0FF;
+}
+
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 100px); }
+    100%   { transform: translate(0, -0px); }    
 }
