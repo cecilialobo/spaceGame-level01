@@ -1,0 +1,12 @@
+.card {
+    display: inline;
+    width: 8rem;
+    height: 8rem;
+    margin: 0.9rem;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+}
+
+.cardPaired {
+    display: none;
+}

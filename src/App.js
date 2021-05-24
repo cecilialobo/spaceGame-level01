@@ -1,9 +1,11 @@
 import './App.css';
-import Introduction from './components/Introduction';
-import Password from './components/Password';
+import Introduction from './components/Introduction/Introduction';
+import Card from './components/Card/Card';
 import Vault from './components/Vault';
 
 function App() {
+
+  const memoryGameNumbers = ['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'];
 
   const changeDisplay = (idToNone, idToBlock) => {
     document.getElementById(idToNone).style.display = 'none';
@@ -23,27 +25,39 @@ function App() {
     <>
       <div id='intro'>
         <Introduction />
-        <button id='intro-button' onClick={() => {changeDisplay('intro', 'challenge1')}}>Let's do it!</button>
+        <button className='button' onClick={() => { changeDisplay('intro', 'challenge1') }}>Let's do it!</button>
       </div>
-      
+
       <div id='challenge1'>
         <p id='inspect-p'>
           First, you need to find the code to disable the alarm of the vault. To find the alarm's code, you need to Hack and <strong>inspect</strong> the hell out of this vault! Find the code and type below.
         </p>
-        <label id='inspect-label' for='inspect-code'>Type here the alarm code:</label>
+        <label id='inspect-label' htmlFor='inspect-code'>Type here the alarm code:</label>
         <input id='inspect-input' type='text'></input>
-        <button onClick={() => {validationChallenge1()}}>DISABLE ALARM</button>
+        <button className='button' onClick={() => { validationChallenge1() }}>DISABLE ALARM</button>
       </div>
 
       <div id='challenge2'>
-        <Password />
-        <button onClick={() => {changeDisplay('challenge2', 'challenge3')}}>I have the password!</button>
+        <p className='password-p'>Amazing! You found the code and now the alarm is disabled. The next task in this mission is to find the password to open the vault.</p>
+        <p className='password-p'>To find the password, you will need to hack the vault system. To make it harder, the aliens have a firewall memory card game. Only one card is unique and it contains the password. Finish the game and find the card!</p>
+        <p id='password-sub'>Don't forget to memorize the number, you will need it later! </p>
+        <div id='card-section'>
+          {memoryGameNumbers.map((number, index) => {
+            return (
+              <Card
+                number={number}
+                key={index}
+              />
+            )
+          })}
+        </div>
+        <button className='button' onClick={() => { changeDisplay('challenge2', 'challenge3') }}>I have the password!</button>
       </div>
-      
+
       <div id='challenge3'>
         <Vault />
       </div>
-      
+
     </>
   );
 }
