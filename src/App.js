@@ -1,7 +1,7 @@
 import './App.css';
 import Introduction from './components/Introduction/Introduction';
 import Card from './components/Card/Card';
-import Vault from './components/Vault';
+import Button from './components/Button';
 
 function App() {
 
@@ -55,7 +55,19 @@ function App() {
       </div>
 
       <div id='challenge3'>
-        <Vault />
+        <p className='password-p'>
+            Now for the final mission, let's see if you have the correct password! Nice hacking so far! All you have to do to open the vault is to type the password in the vault's keyboard. Click below on the correct numbers, in the correct order to open the vault!
+        </p>
+        <Button number='1' />
+        <Button number='2' />
+        <Button number='3' />
+        <Button number='4' />
+        <Button number='5' />
+        <Button number='6' />
+        <Button number='7' />
+        <Button number='8' />
+        <Button number='9' />
+        <Button number='0' />
       </div>
 
     </>
