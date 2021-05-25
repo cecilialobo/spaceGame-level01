@@ -1,0 +1,13 @@
+#keyboard-btn {
+    display: inline;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.3rem;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
+}
+
+#keyboard-btn:hover {
+    background-color: #E8F0FF;
+}

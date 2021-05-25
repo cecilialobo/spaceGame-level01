@@ -38,7 +38,9 @@ function App() {
       </div>
 
       <div id='challenge2'>
-        <p className='password-p'>Amazing! You found the code and now the alarm is disabled. The next task in this mission is to find the password to open the vault.</p>
+        <p className='password-p'>Amazing! You found the code and now the alarm is disabled. 
+        <br/>
+        The next task in this mission is to find the password to open the vault.</p>
         <p className='password-p'>To find the password, you will need to hack the vault system. To make it harder, the aliens have a firewall memory card game. Only one card is unique and it contains the password. Finish the game and find the card!</p>
         <p id='password-sub'>Don't forget to memorize the number, you will need it later! </p>
         <div id='card-section'>
@@ -56,18 +58,27 @@ function App() {
 
       <div id='challenge3'>
         <p className='password-p'>
-            Now for the final mission, let's see if you have the correct password! Nice hacking so far! All you have to do to open the vault is to type the password in the vault's keyboard. Click below on the correct numbers, in the correct order to open the vault!
+        Nice hacking so far! Now for the final mission, let's see if you have the correct password! All you have to do to open the vault is to type the password in the vault's keyboard. Click below on the correct numbers, in the correct order to open the vault!
         </p>
-        <Button number='1' />
-        <Button number='2' />
-        <Button number='3' />
-        <Button number='4' />
-        <Button number='5' />
-        <Button number='6' />
-        <Button number='7' />
-        <Button number='8' />
-        <Button number='9' />
+        <div className='btn-container'>
+          <Button number='1' />
+          <Button number='2' />
+          <Button number='3' />
+        </div>
+
+        <div className='btn-container'>
+          <Button number='4' />
+          <Button number='5' />
+          <Button number='6' />
+        </div>
+        
+        <div className='btn-container'>
+          <Button number='7' />
+          <Button number='8' />
+          <Button number='9' />
+        </div>
         <Button number='0' />
+        <button className='button'>OPEN THE VAULT</button>
       </div>
 
     </>

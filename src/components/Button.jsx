@@ -1,9 +1,10 @@
 import React from 'react';
+import './Button.css';
 
 const Button = (props) => {
     return (
         <>
-            <button>{props.number}</button>
+            <button id='keyboard-btn'>{props.number}</button>
         </>
     )
 }
