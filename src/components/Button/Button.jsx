@@ -4,7 +4,7 @@ import './Button.css';
 const Button = (props) => {
     return (
         <>
-            <button id='keyboard-btn'>{props.number}</button>
+            <button id='keyboard-btn' onClick={() => {props.typedNumber(props.number)}}>{props.number}</button>
         </>
     )
 }

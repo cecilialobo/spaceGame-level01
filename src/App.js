@@ -1,11 +1,9 @@
 import './App.css';
 import Introduction from './components/Introduction/Introduction';
-import Card from './components/Card/Card';
-import Button from './components/Button';
+import MemoryGame from './components/MemoryGame';
+import Keyboard from './components/Keyboard';
 
 function App() {
-
-  const memoryGameNumbers = ['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'];
 
   const changeDisplay = (idToNone, idToBlock) => {
     document.getElementById(idToNone).style.display = 'none';
@@ -40,19 +38,11 @@ function App() {
       <div id='challenge2'>
         <p className='password-p'>Amazing! You found the code and now the alarm is disabled. 
         <br/>
-        The next task in this mission is to find the password to open the vault.</p>
-        <p className='password-p'>To find the password, you will need to hack the vault system. To make it harder, the aliens have a firewall memory card game. Only one card is unique and it contains the password. Finish the game and find the card!</p>
+        The next task in this mission is to find the password to open the vault. 
+        <br/>
+        To find the password, you will need to hack the vault system. To make it harder, the aliens have a firewall memory card game. Only one card is unique and it contains the password. Finish the game and find the card!</p>
         <p id='password-sub'>Don't forget to memorize the number, you will need it later! </p>
-        <div id='card-section'>
-          {memoryGameNumbers.map((number, index) => {
-            return (
-              <Card
-                number={number}
-                key={index}
-              />
-            )
-          })}
-        </div>
+        <MemoryGame />
         <button className='button' onClick={() => { changeDisplay('challenge2', 'challenge3') }}>I HAVE THE PASSWORD</button>
       </div>
 
@@ -60,25 +50,7 @@ function App() {
         <p className='password-p'>
         Nice hacking so far! Now for the final mission, let's see if you have the correct password! All you have to do to open the vault is to type the password in the vault's keyboard. Click below on the correct numbers, in the correct order to open the vault!
         </p>
-        <div className='btn-container'>
-          <Button number='1' />
-          <Button number='2' />
-          <Button number='3' />
-        </div>
-
-        <div className='btn-container'>
-          <Button number='4' />
-          <Button number='5' />
-          <Button number='6' />
-        </div>
-        
-        <div className='btn-container'>
-          <Button number='7' />
-          <Button number='8' />
-          <Button number='9' />
-        </div>
-        <Button number='0' />
-        <button className='button'>OPEN THE VAULT</button>
+        <Keyboard />
       </div>
 
     </>
