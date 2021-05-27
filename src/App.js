@@ -25,7 +25,7 @@ function App() {
     <>
       <div id='intro'>
         <Introduction />
-        <button className='button' onClick={() => { changeDisplay('intro', 'challenge1') }}>Let's do it!</button>
+        <button className='button' onClick={() => { changeDisplay('intro', 'challenge1') }}>LET'S DO IT!</button>
       </div>
 
       <div id='challenge1'>
@@ -53,7 +53,7 @@ function App() {
             )
           })}
         </div>
-        <button className='button' onClick={() => { changeDisplay('challenge2', 'challenge3') }}>I have the password!</button>
+        <button className='button' onClick={() => { changeDisplay('challenge2', 'challenge3') }}>I HAVE THE PASSWORD</button>
       </div>
 
       <div id='challenge3'>

@@ -9,5 +9,5 @@
 }
 
 #keyboard-btn:hover {
-    background-color: #E8F0FF;
+    background-color: var(--dark-gray);
 }
