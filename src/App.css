@@ -70,10 +70,12 @@
     background-color: rgba(24, 28, 38, 0.6);
 }
 
-#password-sub {
+.password-sub {
+    font-size: 1.1rem;
     background-color: var(--black-blue);
-    width: 40rem;
+    width: 45rem;
     margin: 1rem auto;
+    color: var(--light-yellow);
 }
 
 #challenge3 {
@@ -97,11 +99,20 @@
     height: 3rem;
     border-radius: 8px;
     background-color: var(--light-gray);
-    border: 2px solid var(--dark-gray);
+    border: 2px solid var(--dark-blue);
 }
 
 .button:hover {
     background-color: var(--dark-gray);
+}
+
+#back-button {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--dark-yellow);
 }
 
 @keyframes float {

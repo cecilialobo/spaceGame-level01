@@ -6,6 +6,7 @@
     border-radius: 8px;
     font-family: 'Space Mono', monospace;
     font-size: 1.8rem;
+    border: 2px solid var(--dark-blue);
 }
 
 #keyboard-btn:hover {

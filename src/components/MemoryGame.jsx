@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './Card/Card';
 
 const MemoryGame = () => {
@@ -10,15 +10,21 @@ const MemoryGame = () => {
     const flipCard = (number) => {
         if (openCard) {
             if (openCard === number) {
-                //todo
+                memoryGameNumbers.splice(memoryGameNumbers.indexOf(openCard), 1)
+                console.log(memoryGameNumbers)
             } else {
-                //todo
+                //desvirar as duas cartas
+                setOpenCard(null)
             }
-            setOpenCard(null)
         } else {
             setOpenCard(number)
+            console.log('2else' + openCard)
         }
     }
+
+    useEffect(() => {
+        document.getElementById('card-section');
+    }, [memoryGameNumbers])
 
     return (
         <div id='card-section'>
