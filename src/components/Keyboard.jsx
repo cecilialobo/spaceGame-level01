@@ -13,9 +13,11 @@ const Keyboard = () => {
     const validationChallenge3 = (password) => {
         if (password === '134076') {
             alert('CONGRATS! You hacked the vault and recovered the lost GPS! Press ok to move forward to the next level and find more spaceship pieces!');
+            setPassword('');
             //todo - function to move forward to next level
         } else {
             alert('Sorry, you have the wrong password. The vault was not hacked! Start again.');
+            setPassword('');
             //todo - refresh
         }
     }
