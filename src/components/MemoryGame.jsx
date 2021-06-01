@@ -24,7 +24,7 @@ const MemoryGame = () => {
 
     useEffect(() => {
         document.getElementById('card-section');
-    }, [memoryGameNumbers])
+    }, [])
 
     return (
         <div id='card-section'>
