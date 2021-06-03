@@ -10,30 +10,42 @@ import Card from './Card/Card';
 const MemoryGame = () => {
 
     const [numbers, setNumbers] = useState(['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'])
-    const [flippedCard, setFlippedCard] = useState(null)
+    const [firstCard, setFirstCard] = useState(null)
+    const [secondCard, setSecondCard] = useState(null)
 
     useEffect(() => {
-        console.log("Flipped Card: ", flippedCard)
-    }, [flippedCard]);
+        console.log("First Card: ", firstCard)
+        console.log("Second Card: ", secondCard)
+    }, [firstCard, secondCard]);
 
     const selectCard = (selectedCard) => {
-        if (flippedCard) {
-            if ((selectedCard.number === flippedCard.number)
-                && (selectedCard.index !== flippedCard.index)) {
-                const updatedNumbers = numbers.filter(number => number !== selectedCard.number)
-                setNumbers(updatedNumbers)
+        if (!firstCard) {
+            setFirstCard(selectedCard)
+        } else {
+            setSecondCard(selectedCard)
+
+            if ((firstCard.number === selectedCard.number)
+                && (firstCard.index !== selectedCard.index)) {
+
+                const updatedNumbers = numbers.filter(number => number !== firstCard.number)
+                
+                setTimeout(() => {
+                    setNumbers(updatedNumbers)
+                }, 750);
             }
 
-            setFlippedCard(null);
-        } else {
-            setFlippedCard(selectedCard)
+            setTimeout(() => {
+                setFirstCard(null)
+                setSecondCard(null)
+            }, 750);
         }
     }
 
     const isCardFlipped = ({ number, index }) => {
-        return flippedCard
-            && flippedCard.index === index
-            && flippedCard.number === number
+        const isFirstCard = firstCard && firstCard.index === index && firstCard.number === number
+        const isSecondCard = secondCard && secondCard.index === index && secondCard.number === number
+        
+        return isFirstCard || isSecondCard
     }
 
     return (
