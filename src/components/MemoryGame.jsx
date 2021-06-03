@@ -1,39 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card/Card';
 
+/**
+ * TODO:
+ * - Block flip when there is only one card
+ * - Remove cards when numbers match
+ * - Flip cards back when numbers mismatch
+ */
 const MemoryGame = () => {
 
-    const memoryGameNumbers = ['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'];
+    const [numbers, setNumbers] = useState(['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'])
+    const [flippedCard, setFlippedCard] = useState(null)
 
-    const [openCard, setOpenCard] = useState(null)
+    useEffect(() => {
+        console.log("Flipped Card: ", flippedCard)
+    }, [flippedCard]);
 
-    const flipCard = (number) => {
-        if (openCard) {
-            if (openCard === number) {
-                memoryGameNumbers.splice(memoryGameNumbers.indexOf(openCard), 1)
-                console.log(memoryGameNumbers)
-            } else {
-                //desvirar as duas cartas
-                setOpenCard(null)
+    const selectCard = (selectedCard) => {
+        if (flippedCard) {
+            if ((selectedCard.number === flippedCard.number)
+                && (selectedCard.index !== flippedCard.index)) {
+                const updatedNumbers = numbers.filter(number => number !== selectedCard.number)
+                setNumbers(updatedNumbers)
             }
+
+            setFlippedCard(null);
         } else {
-            setOpenCard(number)
-            console.log('2else' + openCard)
+            setFlippedCard(selectedCard)
         }
     }
 
-    useEffect(() => {
-        document.getElementById('card-section');
-    }, [])
-
     return (
         <div id='card-section'>
-            {memoryGameNumbers.map((number, index) => {
+            {numbers.map((number, index) => {
                 return (
                     <Card
-                        number={number}
                         key={index}
-                        onOpen={flipCard}
+                        onFlip={() => selectCard({ number, index })}
+                        number={number}
+                        isFlipped={flippedCard && flippedCard.index === index}
                     />
                 )
             })}
