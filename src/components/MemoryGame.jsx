@@ -30,6 +30,12 @@ const MemoryGame = () => {
         }
     }
 
+    const isCardFlipped = ({ number, index }) => {
+        return flippedCard
+            && flippedCard.index === index
+            && flippedCard.number === number
+    }
+
     return (
         <div id='card-section'>
             {numbers.map((number, index) => {
@@ -38,7 +44,7 @@ const MemoryGame = () => {
                         key={index}
                         onFlip={() => selectCard({ number, index })}
                         number={number}
-                        isFlipped={flippedCard && flippedCard.index === index}
+                        isFlipped={isCardFlipped({ number, index })}
                     />
                 )
             })}
