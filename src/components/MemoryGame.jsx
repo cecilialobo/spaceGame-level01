@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card/Card';
 
-/**
- * TODO:
- * - Block flip when there is only one card
- * - Remove cards when numbers match
- * - Flip cards back when numbers mismatch
- */
 const MemoryGame = () => {
 
     const [numbers, setNumbers] = useState(['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'])

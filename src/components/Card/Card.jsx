@@ -4,7 +4,7 @@ import './Card.css';
 const Card = (props) => {
     return (
         <>
-            <button className={'card' + props.number} onClick={() => {
+            <button className='card' onClick={() => {
                 props.onFlip();
             }}>{props.isFlipped ? props.number : 'Click to flip'}</button>
         </>
