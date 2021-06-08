@@ -33,7 +33,7 @@
 
 #inspect-p {
     font-size: 1.5rem;
-    width: 60rem;
+    width: 50rem;
     margin: 2rem auto;
     padding: 1rem;
     border: 2px solid var(--light-yellow);
@@ -62,7 +62,7 @@
 
 .password-p {
     font-size: 1.3rem;
-    width: 60rem;
+    width: 50rem;
     margin: 2rem auto;
     padding: 1rem;
     border: 2px solid var(--light-yellow);

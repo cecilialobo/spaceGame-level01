@@ -44,6 +44,7 @@ function App() {
         <br/>
         The next task in this mission is to find the password to open the vault. 
         <br/>
+        <br/>
         To find the password, you will need to hack the vault system. To make it harder, the OXOs have a firewall memory card game. Only one card is unique and it contains the password. Finish the game and find the card!</p>
         <p className='password-sub'>Don't forget to memorize the password, you will need it later! </p>
         <MemoryGame />
