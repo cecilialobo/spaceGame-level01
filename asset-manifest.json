@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/spaceGame-level01/static/css/main.414391d5.chunk.css",
+    "main.js": "/spaceGame-level01/static/js/main.4d271ed1.chunk.js",
+    "main.js.map": "/spaceGame-level01/static/js/main.4d271ed1.chunk.js.map",
+    "runtime-main.js": "/spaceGame-level01/static/js/runtime-main.54f99187.js",
+    "runtime-main.js.map": "/spaceGame-level01/static/js/runtime-main.54f99187.js.map",
+    "static/js/2.92d87784.chunk.js": "/spaceGame-level01/static/js/2.92d87784.chunk.js",
+    "static/js/2.92d87784.chunk.js.map": "/spaceGame-level01/static/js/2.92d87784.chunk.js.map",
+    "static/js/3.30130a6c.chunk.js": "/spaceGame-level01/static/js/3.30130a6c.chunk.js",
+    "static/js/3.30130a6c.chunk.js.map": "/spaceGame-level01/static/js/3.30130a6c.chunk.js.map",
+    "index.html": "/spaceGame-level01/index.html",
+    "static/css/main.414391d5.chunk.css.map": "/spaceGame-level01/static/css/main.414391d5.chunk.css.map",
+    "static/js/2.92d87784.chunk.js.LICENSE.txt": "/spaceGame-level01/static/js/2.92d87784.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/spaceGame-level01/static/media/background.afdd00e2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.54f99187.js",
+    "static/js/2.92d87784.chunk.js",
+    "static/css/main.414391d5.chunk.css",
+    "static/js/main.4d271ed1.chunk.js"
+  ]
+}
